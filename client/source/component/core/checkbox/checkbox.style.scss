@@ -1,0 +1,26 @@
+.Checkbox {
+    &_isInline {
+        display: inline-flex;
+    }
+
+    &-Box {
+        display: inline-flex;
+        margin-right: 4px;
+    }
+
+    &-Input {
+        display: none;
+        font: 16px/1.5 'Roboto', sans-serif;
+        appearance: none;
+    }
+
+    &-Label {
+        display: inline-flex;
+        padding: 8px 0;
+        
+        &Text {
+            display: inline-block;
+            user-select: none;
+        }
+    }
+}

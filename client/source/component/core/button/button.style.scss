@@ -1,0 +1,85 @@
+.Button {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    height: 32px;
+    padding: 0 16px;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    border: 1px none var(--b-color);
+    border-radius: 2px;
+    background: var(--bg-color);
+    color: var(--color);
+    font: 14px/1 'Roboto', sans-serif;
+    vertical-align: middle;
+    user-select: none;
+
+    &:hover {
+        border-color: var(--b-color-hover);
+        background-color: var(--bg-color-hover);
+        color: var(--color-hover);
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &-Text {
+        & + .Button-Icon {
+            margin-left: 8px;
+        }
+    }
+
+    &-Icon {
+        display: inline-flex;
+
+        & + .Button-Text {
+            margin-left: 8px;
+        }
+    }
+
+    &._variant {
+        &_fill {
+            background-color: var(--fill-bg-color);
+            color: var(--fill-color);
+
+            &:hover {
+                background-color: var(--fill-bg-color-hover);
+            }
+        }
+
+        &_dash {
+            border-style: dashed;
+        }
+
+        &_double {
+            border-width: 3px;
+            border-style: double;
+        }
+
+        &_dot {
+            border-width: 2px;
+            border-style: dotted;
+        }
+
+        &_solid {
+            border-style: solid;
+        }
+    }
+
+    &._shape_circle {
+        border-radius: 16px;
+    }
+
+    &._isPureIcon {
+        justify-content: center;
+        width: 32px;
+        padding: 0;
+    }
+
+    &._isFullWidth {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}

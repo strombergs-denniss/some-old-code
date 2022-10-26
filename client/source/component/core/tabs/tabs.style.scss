@@ -1,0 +1,13 @@
+.Tabs {
+    &-Head {
+        & > .Button {
+            border-bottom: 2px solid transparent;
+
+            &._isActive {
+                transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+                border-bottom-color: var(--b-color-hover);
+                color: var(--color-hover);
+            }
+        }
+    }
+}

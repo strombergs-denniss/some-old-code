@@ -1,0 +1,45 @@
+.Modal {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 80vh;
+    border: 1px none var(--b-color);
+    border-radius: 2px;
+    background-color: #ffffff;
+
+    &-Container {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000041;
+        font: 'Roboto', sans-serif;
+    }
+
+    &-Head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+
+        & > .Button {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &-Head {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &-Content {
+        height: 100%;
+        padding: 8px;
+    }
+}

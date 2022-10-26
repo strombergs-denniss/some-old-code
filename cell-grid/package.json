@@ -1,0 +1,22 @@
+{
+    "name": "cell-grid",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack serve --config ./dev.config.js",
+        "prod": "webpack --config ./prod.config.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "gl-matrix": "^3.4.3",
+        "moment": "^2.29.1"
+    },
+    "devDependencies": {
+        "webpack": "^5.61.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.4.0"
+    }
+}

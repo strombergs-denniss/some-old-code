@@ -1,0 +1,66 @@
+.TimeField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+
+    &-Input {
+        box-sizing: border-box;
+        height: 32px;
+        padding: 0 8px;
+        transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+        border: 1px none var(--b-color);
+        border-radius: 2px;
+        background: var(--bg-color);
+        color: var(--color);
+        font: 14px/1 'Roboto', sans-serif;
+
+        &:hover {
+            border-color: var(--b-color-hover);
+            background-color: var(--bg-color-hover);
+        }
+
+        &:focus {
+            border-color: var(--b-color-hover);
+            outline: none;
+            background-color: var(--bg-color-hover);
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, .3);
+        }
+
+        &._variant {
+            &_fill {
+                background-color: var(--fill-bg-color);
+                color: var(--fill-color);
+
+                &:hover {
+                    background-color: var(--fill-bg-color-hover);
+                }
+            }
+
+            &_dash {
+                border-style: dashed;
+            }
+
+            &_double {
+                border-width: 3px;
+                border-style: double;
+            }
+
+            &_dot {
+                border-width: 2px;
+                border-style: dotted;
+            }
+
+            &_solid {
+                border-style: solid;
+            }
+        }
+
+        &._shape_circle {
+            border-radius: 16px;
+        }
+    }
+
+    &-Label {
+        display: none;
+    }
+}

@@ -1,0 +1,115 @@
+.Notifications {
+    z-index: 2000;
+    width: 360px;
+    height: 100vh;
+
+    &-Container {
+        display: flex;
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        left: 0;
+        justify-content: flex-end;
+        width: 100vw;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+        pointer-events: none;
+    }
+
+    &-Head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px;
+
+        & > .Button {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &-Head {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &-Content {
+        height: 100%;
+        padding: 8px;
+    }
+}
+
+@keyframes slide-in {
+    0% { right: -360px; }
+    100% { right: 0; }
+}
+
+@keyframes slide-out {
+    0% { right: 0; }
+    100% { right: -360px; }
+}
+
+.Notification {
+    position: relative;
+    margin: 16px;
+    margin-bottom: 16px;
+    padding: 16px 24px;
+    animation: slide-in 0.3s;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+    pointer-events: all;
+
+    &-Title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &-Icon {
+        margin-right: 16px;
+    }
+
+    &-Close {
+        margin-left: auto;
+    }
+
+    &._hasIcon {
+        .Notification-Description {
+            margin-left: 40px;
+        }
+    }
+
+    &._variant {
+        &_success {
+            .Notification-Icon {
+                color: var(--success-color);
+            }
+        }
+
+        &_info {
+            .Notification-Icon {
+                color: var(--info-color);
+            }
+        }
+
+        &_error {
+            .Notification-Icon {
+                color: var(--error-color);
+            }
+        }
+
+        &_warning {
+            .Notification-Icon {
+                color: var(--warning-color);
+            }
+        }
+    }
+
+    &._isDisappearing {
+        right: -360px;
+        animation: slide-out 0.2s;
+    }
+}

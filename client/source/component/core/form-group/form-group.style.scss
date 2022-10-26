@@ -1,0 +1,10 @@
+.FormGroup {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &-Label {
+        display: block;
+        padding: 0;
+    }
+}

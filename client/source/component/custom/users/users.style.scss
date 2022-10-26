@@ -1,0 +1,15 @@
+.Users {
+    &-Picture {
+        margin-right: 8px;
+        border-radius: 2px;
+        object-fit: cover;
+    }
+
+    &-Content {
+        .List-Item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+        }
+    }
+}

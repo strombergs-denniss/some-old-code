@@ -1,0 +1,11 @@
+.Link {
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    background: var(--bg-color);
+
+    color: var(--color);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--color-hover);
+    }
+}

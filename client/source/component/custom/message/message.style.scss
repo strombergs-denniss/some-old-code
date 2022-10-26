@@ -1,0 +1,60 @@
+.Message {
+    display: grid;
+    grid-template-columns: 56px auto;
+    padding: 8px;
+    font: 14px/2 'Roboto', sans-serif;
+    gap: 8px;
+
+    &:hover {
+        & .Message-Actions {
+            opacity: 1;
+        }
+    }
+
+    &-Head {
+        display: flex;
+        justify-content: space-between;
+        height: 28px;
+        user-select: none;
+    }
+
+    &-Alias {
+        margin-right: 8px;
+        font-weight: 500;
+    }
+
+    &-Actions {
+        transition: opacity 0.2s;
+        opacity: 0;
+
+        & > .Button {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &-Picture {
+        width: 56px;
+        height: 56px;
+        user-select: none;
+
+        & > img {
+            border-radius: 2px;
+            object-fit: cover;
+        }
+    }
+
+    &-Attachment {
+        &Image {
+            height: 266px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+    }
+
+    &._isEditing {
+        background-color: rgb(235, 235, 235);
+    }
+}

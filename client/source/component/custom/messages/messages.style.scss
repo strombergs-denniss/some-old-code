@@ -1,0 +1,26 @@
+.Messages {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &-Head {
+        display: flex;
+        height: 32px;
+        padding: 8px;
+        border-bottom: 1px solid var(--b-color);
+    }
+
+    &-List {
+        flex-grow: 1;
+        overflow-y: scroll;
+
+        & > div {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &-LoadMore {
+        margin: 8px 8px;
+    }
+}

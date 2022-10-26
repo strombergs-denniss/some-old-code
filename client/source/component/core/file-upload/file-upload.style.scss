@@ -1,0 +1,46 @@
+.FileUpload {
+    margin-bottom: 8px;
+
+    &-Input {
+        display: none;
+    }
+
+    &._variant_image {
+        .FileUpload-Label {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            width: 128px;
+            height: 128px;
+            border: 1px dashed var(--b-color);
+            border-radius: 2px;
+            background: var(--bg-color);
+
+            &:hover {
+                border-color: var(--b-color-hover);
+                background-color: var(--bg-color-hover);
+                color: var(--color-hover);
+                cursor: pointer;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &-LabelText {
+        display: none;
+        margin-bottom: 8px;
+    }
+
+    &._shouldShowLabel {
+        .FileUpload-LabelText {
+            display: block;
+        }
+    }
+}
